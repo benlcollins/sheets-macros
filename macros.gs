@@ -91,8 +91,22 @@ function unhideAllSheets() {
   });
 };
 
+// 6.12 traverse up through tabs with shortcut key
+function upSheet() {
+  var allSheets = SpreadsheetApp.getActiveSpreadsheet().getSheets();
+  var upSheet = 0;
+  
+  allSheets.forEach(function(sheet) {
+    if (sheet.getName() == SpreadsheetApp.getActiveSheet().getName()) {
+      upSheet = sheet.getIndex() + 1;
+    }
+    else if (upSheet == sheet.getIndex()) {
+      sheet.activate();
+    }
+  });
+}
 
-// 6.12 reset all filters for a data range on current Sheet
+// 6.14 reset all filters for a data range on current Sheet
 function resetFilter() {
   var sheet = SpreadsheetApp.getActiveSheet();
   var range = sheet.getDataRange();
