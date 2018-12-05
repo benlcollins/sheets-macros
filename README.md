@@ -16,4 +16,4 @@ Collection of macros for Google Sheets.
 
 ## Resources
 
-Blog post coming Monday 3rd December 2018.
+Blog post: [a The complete guide to simple automation in Google Sheets, using Macros](https://www.benlcollins.com/spreadsheets/macros/)
